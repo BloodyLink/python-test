@@ -6,15 +6,15 @@ This technical test requires the design and implementation of a basic management
 
 The current process consist of a person (Nora) sending a text message via Whatsapp to all the chilean employees, the message contains today's menu with the different alternatives of lunch. 
 
->Hola! 
->Dejo el menú de hoy :)
-
->Opción 1: Pastel de choclo, Ensalada y Postre
->Opción 2. Arroz con nugget de pollo, Ensalada y Postre
->Opción 3: Arroz con hamburguesa, Ensalada y Postre
->Opción 4: Ensalada premium de pollo y Postre
-
->Tengan lindo día!
+> Hola!  
+> Dejo el menú de hoy :)
+>
+> Opción 1: Pastel de choclo, Ensalada y Postre  
+> Opción 2. Arroz con nugget de pollo, Ensalada y Postre  
+> Opción 3: Arroz con hamburguesa, Ensalada y Postre  
+> Opción 4: Ensalada premium de pollo y Postre  
+>
+> Tengan lindo día!
 
 With the new system, Nora should be able to:
 
