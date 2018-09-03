@@ -18,15 +18,13 @@ The current process consist of a person (Nora) sending a text message via Whatsa
 
 With the new system, Nora should be able to:
 
-- Create and edit today's menu.
-- Send an email reminder with today's menu to all chilean employees (this process needs to be asynchronous).
-- Send a Slack reminder with today's menu to the #almuerzo channel (this process needs to be asynchronous).
+- Create a menu for a specific date.
+- Send a Slack reminder with today's menu to all chilean employees (this process needs to be asynchronous).
 
 The employees should be able to:
 
 - Choose their preferred meal (until 11 AM CLT).
 - Specify customizations (e.g. no tomatoes in the salad).
-- Choose between the normal version or the mythical extra large version.
 
 Nora should be the only user to be able to see what the Cornershop employees have requested, and to create and edit today's menu. The employees should be able to specify what they want for lunch but they shouldn't be able to see what others have requested. 
 
