@@ -25,7 +25,9 @@ SECRET_KEY = 'v2-a)zd^86c3u)!d-qq+po+mjdkb0-t--p$j@)xamzle#$4t2p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+]
 
 
 # Application definition
@@ -37,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'apps',
+    'apps.menu_admin',
     'apps.slack_messaging',
     'django_extensions',
 ]

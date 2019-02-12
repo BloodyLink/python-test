@@ -17,6 +17,7 @@ class MenuService():
             response = 'Menu saved!'
         except Exception as e:
             response = 'There was a problem saving the menu: {error}'.format(error=e)
+        return response
 
     @staticmethod
     def getMenuByDate(date):
