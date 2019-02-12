@@ -3,3 +3,5 @@ Django==2.0.5
 pep8==1.7.1
 flake8==3.5.0
 psycopg2>=2.7,<3.0
+celery>=4,<4.3
+django-extensions~=2.0.0
