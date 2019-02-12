@@ -20,7 +20,7 @@ class Order(models.Model):
 
 class Company(models.Model):
     name = models.CharField(max_length=250)
-    slack_channel = models.CharField(max_length=9)
+    slack_webhook = models.CharField(max_length=250, default=None)
 
     def __str__(self):
         return self.name
