@@ -21,4 +21,4 @@ class MenuService():
 
     @staticmethod
     def getMenuByDate(date):
-        return Menu.object.get(date=date)
+        return Menu.objects.filter(date=date)
