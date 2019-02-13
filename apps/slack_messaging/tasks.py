@@ -22,7 +22,7 @@ def sendMenu(channel=None, menu=None):
     menu_descriptions = []
     for menu in menus.values():
         menu_descriptions.append(menu['description'])
-    plates = '\n - '.join(menu_descriptions)
+    meal = '\n - '.join(menu_descriptions)
 
     message = f'''
     Hola!\n
@@ -32,7 +32,7 @@ def sendMenu(channel=None, menu=None):
     data = {
         'attachments': [
             {
-                'text': f'- {plates}',
+                'text': f'- {meal}',
                 'pretext': message,
                 'footer': 'Que tengan un lindo día!'
             }

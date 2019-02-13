@@ -27,8 +27,8 @@ def setup_periodic_slack_message(sender, **kwargs):
     app.conf.beat_schedule = {
         'send-menu-every-morning': {
             'task': 'apps.slack_messaging.tasks.sendMenu',
-            # 'schedule': crontab(hour=9, minute=0),
-            'schedule': 15.0,
+            'schedule': crontab(hour=12, minute=0),
+            # 'schedule': 15.0,
     },
 }
 

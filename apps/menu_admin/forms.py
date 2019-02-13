@@ -1,7 +1,13 @@
 from django import forms
 
+from .models import Meal
+
 class MenuInsertForm(forms.Form):
-    menu = forms.CharField()
+    options = list(Meal.objects.all().values_list())
+    meals = forms.MultipleChoiceField(
+        widget=forms.CheckboxSelectMultiple,
+        choices=options,
+    )
     date = forms.DateField()
 
 class CompanyInsertForm(forms.Form):
