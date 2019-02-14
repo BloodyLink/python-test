@@ -16,22 +16,25 @@ from apps.menu_admin.company_service import CompanyService
 @shared_task
 def sendMenu(channel=None, menu=None):
     date = dt.today().strftime('%Y-%m-%d')
-    menus = MenuService.getMenuByDate(date=date)
+    menu = MenuService.getMenuByDate(date=date)
     companies = CompanyService.getCompanies()
     headers = {'Content-type': 'application/json'}
-    menu_descriptions = []
-    for menu in menus.values():
-        menu_descriptions.append(menu['description'])
-    meal = '\n - '.join(menu_descriptions)
+    meal_descriptions = []
+    for meal in menu.meal_set.all().values():
+        meal_descriptions.append(meal['description'])
+    meal = '\n - '.join(meal_descriptions)
 
     message = f'''
     Hola!\n
     Dejo el menú de hoy {date} :)
     '''
-
+    uuid = str(menu.uuid)
+    link = f'http://localhost:8000/menu/{uuid}'
     data = {
         'attachments': [
             {
+                'title': 'Ingresa aquí para pedir tu menu.',
+                'title_link': link,
                 'text': f'- {meal}',
                 'pretext': message,
                 'footer': 'Que tengan un lindo día!'

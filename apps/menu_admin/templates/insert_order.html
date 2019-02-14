@@ -1,0 +1,6 @@
+<h3>Este es el menú del día {{ date }}</h3>
+<form action="/order_form/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Enviar pedido">
+</form>

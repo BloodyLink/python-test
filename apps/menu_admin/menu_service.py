@@ -29,7 +29,7 @@ class MenuService():
 
     @staticmethod
     def getMenuByDate(date):
-        return Menu.objects.filter(date=date)
+        return Menu.objects.get(date=date)
 
     @staticmethod
     def saveMeal(description):
@@ -41,3 +41,11 @@ class MenuService():
         except Exception as e:
             response = 'There was a problem saving the meal: {error}'.format(error=e)
         return response
+
+    @staticmethod
+    def getAllmeals():
+        return Meal.objects.all()
+
+    @staticmethod
+    def getMenuByUuid(uuid):
+        return Menu.objects.get(uuid=uuid)

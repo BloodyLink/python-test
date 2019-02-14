@@ -1,10 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
-from datetime import date
+from datetime import (
+    date,
+    datetime as dt,
+)
 
 from .menu_service import MenuService
-from .forms import MenuInsertForm
+from .forms import (
+    MenuInsertForm,
+    OrderInsertForm,
+)
 
 menuService = MenuService()
 
@@ -35,3 +41,12 @@ def insertMenuForm(request):
 
 def saveMeal(description):
     return menuService.saveMeal(description=description)
+
+def insertOrderForm(request, uuid):
+    insertForm = OrderInsertForm()
+    form = insertForm.getForm(uuid=uuid)
+    dict = {
+        'form': form,
+        'date': dt.today().strftime('%Y-%m-%d'),
+    }
+    return render(request, 'insert_order.html', context=dict)
